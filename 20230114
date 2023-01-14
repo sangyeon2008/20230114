@@ -1,0 +1,17 @@
+#수 정렬하기
+a=int(input())
+list_A=[]
+for i in range(a):
+    list_A.append(int(input()))
+
+def Bubble_sort(_list:list, reverse = True):
+    if reverse:
+        for i in range(len(_list) - 1):
+            for j in range(len(_list) - 1 - i):
+                if _list[j] > _list[j + 1]:
+                    tmp = _list[j]
+                    _list[j] = _list[j + 1]
+                    _list[j + 1] = tmp
+Bubble_sort(list_A)
+for j in range(len(list_A)):
+    print(list_A[j])
